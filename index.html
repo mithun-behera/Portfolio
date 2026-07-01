@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="protfolioStyle.css">
+</head>
+
+<body>
+    <!-- <h1> Welcome To My Portfolio</h1> -->
+    <header>
+        <nav>
+            <h2 class="logo">MB Portfolio</h2>
+            <button id="theme-toggle" class="theme-btn">🌙</button>
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+            <ul id="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-text" data-aos="fade-right">
+                <h3>Hi, I'm</h3>
+                <h1>Mithun Behera</h1>
+                <h2>Java Full Stack Developer</h2>
+                <p>I build responsive websites and Java applications.
+                    Currently learning Java Full Stack Development.
+                </p>
+                <button>Contact Me</button>
+                <a href="resume/Mithun_Behera_Resume.pdf" download><button class="resume-btn"> Download Resume</button></a>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <img src="images/mithun.jpg" alt="Portfolio image">
+            </div>
+        </section>
+
+        <!-- Aboubt Section Start  -->
+        <section id="about" class="about" data-aos="fade-up">
+            <h2>About Me</h2>
+
+            <p> I am Mithun Behera, a B.Tech graduate in Computer Science and Engineering.
+                I am passionate about Java Full Stack Development and enjoy building
+                responsive web applications. I am continuously improving my programming,
+                problem-solving, and software development skills.
+            </p>
+            <div class="about-details">
+
+                <div class="card">
+                    <h3>🎓 Education</h3>
+                    <p>B.Tech - Computer Science & Engineering</p>
+                </div>
+
+                <div class="card">
+                    <h3>💻 Skills</h3>
+                    <p>Java, HTML, CSS, JavaScript, JDBC, SQL</p>
+                </div>
+
+                <div class="card">
+                    <h3>🚀 Goal</h3>
+                    <p>Become a Java Full Stack Developer.</p>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- About Section End  -->
+
+        <!-- Skills Section Start -->
+        <section id="skills" class="skills" data-aos="zoom-in">
+            <h2>My Skills</h2>
+
+            <div class="skills-container">
+
+                <div class="skill-card">CSS</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">Java</div>
+                <div class="skill-card">Collections</div>
+                <div class="skill-card">JDBC</div>
+                <div class="skill-card">Servlet</div>
+                <div class="skill-card">JSP</div>
+                <div class="skill-card">Spring Boot</div>
+                <div class="skill-card">Oracle SQL</div>
+                <div class="skill-card">Git</div>
+                <div class="skill-card">GitHub</div>
+                <div class="skill-card">Microservices</div>
+                <div class="skill-card">React</div>
+                <div class="skill-card">MySQL</div>
+                <div class="skill-card">REST API</div>
+                <div class="skill-card">Hibernate</div>
+            </div>
+        </section>
+        <!-- Project Section  start-->
+        <section id="projects" class="projects" data-aos="fade-up">
+            <h2>My Projects</h2>
+            <div class="projects-container">
+                <!-- project 1 -->
+                <div class="project-card">
+                    <img src="images/employee.png" alt="Employee Management System">
+                    <h3>Employee Management System</h3>
+
+                    <p> A Java JDBC project to manage employee records with CRUD operations.</p>
+
+                    <h4>Java | JDBC | Oracle</h4>
+
+                    <div class="project-buttons">
+                        <button>GitHub</button>
+                        <button class="live-btn">Live Demo</button>
+                    </div>
+                </div>
+                <!-- Project 2  -->
+                <div class="project-card">
+                    <img src="images/library.jpg" alt="Libray Management System">
+
+                    <h3>Libray Management System</h3>
+
+                    <p>Manage Books, issue books, return books using Java Collections.</p>
+                    <h4>Java | Collections</h4>
+
+                    <div class="project-buttons">
+                        <button>GitHub</button>
+                        <button class="live-btn">Live Demo</button>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="images/portfolio.png" alt="Portfolio websites">
+                    <h3>Portfolio website</h3>
+
+                    <p>Personal portfolio website built using HTML, CSS and JavaScript.</p>
+
+                    <h4>HTML | CSS | JavaScript</h4>
+
+                    <div class="project-buttons">
+                        <button>GitHub</button>
+                        <button class="live-btn">Live Demo</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Project Section end -->
+
+        <!-- Education Section Start -->
+        <section id="education" class="education" data-aos="fade-up">
+            <h2>Education</h2>
+            <div class="education-container">
+                <div class="education-card">
+                    <h3>🎓 B.Tech</h3>
+                    <h4>Computer Science & Engineering</h4>
+                    <p>Oxford College of Engineering and Management
+                        BPUT, Odisha</p>
+                    <span>2020-2024</span>
+                </div>
+                <div class="education-card">
+                    <h3>💻 Java Full Stack Development</h3>
+                    <h4>Naresh IT, Hyderbad</h4>
+                    <p>Java • Spring Boot • JDBC • SQL • HTML • CSS • JavaScript</p>
+                    <span>2025-2026</span>
+                </div>
+                <div class="education-card">
+                    <h3>📚 Higher Secondary (+2 Science)</h3>
+                    <h4>CHSE Odisha</h4>
+                    <p>Physics • Chemistry • Mathematics</p>
+                    <span>2018-2020</span>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+
+        <section id="contact" class="contact" data-aos="fade-up">
+            <h2>Contact Me</h2>
+
+            <div class="contact-container">
+                <!-- Contact Information -->
+
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>📧 Email</p>
+                    <span>beheramithun2021@gmail.com</span>
+
+                    <p>📱 Phone</p>
+                    <span>+91 8456911993</span>
+
+                    <p>📍 Location</p>
+                    <span>Hyderabad,India</span>
+
+                    <p>💼 LinkedIn</p>
+                    <span>Linkedin.com/in/username</span>
+                </div>
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form action="">
+                        <input type="text" class="text" placeholder="Your Name" required>
+
+                        <input type="text" class="text" placeholder="Your Name" required>
+
+                        <textarea rows="6" placeholder="Your Message"></textarea>
+
+                        <button type="submit"> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>MB Portfolio</h2>
+            <p>Java Full Stack Developer</p>
+
+            <div class="social-links">
+                <a href="https://github.com/your-github" target="_blank">🐙 GitHub</a>
+
+                <a href="https://linkedin.com/in/your-linkedin" target="_blank">💼 LinkedIn</a>
+
+                <a href="mailto:beheramithun2021@gmail.com">📧 Email</a>
+            </div>
+            <p class="copyright">
+                © 2026 Mithun Behera. All Rights Reserved.
+            </p>
+            <p class="made">
+                Made with ❤️ using HTML, CSS & JavaScript
+            </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration:1000,
+    once:true
+});
+</script>
+</body>
+
+</html>
