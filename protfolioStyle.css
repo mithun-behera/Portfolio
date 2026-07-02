@@ -880,3 +880,27 @@ body.dark .footer{
     background:#020617;
 
 }
+
+
+/* Skill notes page is not ready yet */
+.pending-skill {
+    background: #64748b;
+    color: white;
+    opacity: 0.8;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Small label */
+.pending-skill::after {
+    content: "Coming Soon";
+    display: block;
+    font-size: 10px;
+    margin-top: 4px;
+    color: #facc15;
+}
+
+.pending-skill:hover {
+    opacity: 1;
+    transform: translateY(-4px);
+}
