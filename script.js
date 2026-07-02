@@ -44,3 +44,43 @@ themeBtn.addEventListener("click",()=>{
     }
 
 });
+
+// Contact Message 
+const contactForm = document.getElementById("contact-form");
+const formMessage = document.getElementById("form-message");
+
+contactForm.addEventListener("submit",async function (event) {
+    event.preventDefault();
+
+    const contactData = {
+        name:document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
+
+    try{
+        const response = await fetch("http://localhost:8081/api/contact",{
+          method: "POST",
+          headers:{
+            "Content-Type": "application/json"
+          },
+          body:JSON.stringify(contactData)
+        });
+
+        const result = await response.text();
+
+        if(response.ok){
+            formMessage.innerText = "✅ Message sent successfully!";
+            formMessage.style.color="green";
+            contactForm.reset();
+        }
+        else{
+            formMessage.innerText="❌ Message could not be sent.";
+            formMessage.style.color="red";
+        }
+    }catch(error){
+        formMessage.innerText = "❌ Backend server is not running.";
+        formMessage.style.color="red";
+    }
+    
+})
