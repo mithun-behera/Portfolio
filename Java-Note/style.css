@@ -20,11 +20,9 @@ body {
     height: 75px;
     background: #0f172a;
     color: white;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 0 40px;
     position: sticky;
     top: 0;
@@ -71,7 +69,6 @@ body {
     background: #111827;
     color: white;
     padding: 28px 20px;
-
     position: sticky;
     top: 75px;
     height: calc(100vh - 75px);
@@ -98,13 +95,30 @@ body {
     padding: 11px 12px;
     border-radius: 7px;
     margin: 4px 0;
-    transition: 0.3s;
 }
 
 .sidebar a:hover,
 .sidebar a.active {
     background: #2563eb;
     color: white;
+}
+
+/* ---------- Coming Soon Sidebar Items ---------- */
+.sidebar .coming-soon {
+    display: block;
+    padding: 11px 12px;
+    margin: 4px 0;
+    border-radius: 7px;
+    color: #94a3b8;
+    background: #1f2937;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.sidebar .coming-soon small {
+    float: right;
+    font-size: 10px;
+    color: #facc15;
 }
 
 /* ---------- Content ---------- */
@@ -156,7 +170,6 @@ body {
     padding: 18px;
     border-radius: 12px;
     text-align: center;
-    backdrop-filter: blur(5px);
 }
 
 .stat-card h3 {
@@ -168,7 +181,7 @@ body {
     color: #dbeafe;
 }
 
-/* ---------- Topic Section ---------- */
+/* ---------- Topic and Program Sections ---------- */
 .topic-section,
 .program-section {
     margin-bottom: 55px;
@@ -181,6 +194,7 @@ body {
     color: #0f172a;
 }
 
+/* ---------- Topic Cards ---------- */
 .topic-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -191,20 +205,12 @@ body {
     background: white;
     border-radius: 14px;
     padding: 25px;
-    text-decoration: none;
     color: #1e293b;
     box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08);
     border: 1px solid #e2e8f0;
-    transition: 0.3s;
 }
 
-.topic-card:hover {
-    transform: translateY(-8px);
-    border-color: #2563eb;
-    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.2);
-}
-
-.topic-card span {
+.topic-card > span {
     font-size: 34px;
 }
 
@@ -230,13 +236,6 @@ body {
     color: white;
     padding: 28px;
     border-radius: 14px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.program-card:hover {
-    background: #1d4ed8;
-    transform: translateY(-7px);
 }
 
 .program-card h3 {
@@ -250,8 +249,27 @@ body {
     margin-bottom: 20px;
 }
 
-.program-card span {
+.program-card > span {
     color: #93c5fd;
+    font-weight: bold;
+}
+
+/* ---------- Coming Soon Cards ---------- */
+.coming-soon-card {
+    opacity: 0.72;
+    cursor: not-allowed;
+    position: relative;
+}
+
+.coming-soon-card::after {
+    content: "Coming Soon";
+    display: inline-block;
+    margin-top: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #f59e0b;
+    color: #111827;
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -282,7 +300,6 @@ body.dark-mode .topic-card p {
 
 /* ---------- Mobile ---------- */
 @media (max-width: 850px) {
-
     .top-header {
         padding: 0 18px;
     }
@@ -311,8 +328,14 @@ body.dark-mode .topic-card p {
         text-align: center;
     }
 
-    .sidebar a {
+    .sidebar a,
+    .sidebar .coming-soon {
         text-align: center;
+    }
+
+    .sidebar .coming-soon small {
+        float: none;
+        margin-left: 8px;
     }
 
     .content {
